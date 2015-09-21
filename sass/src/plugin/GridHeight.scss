@@ -1,0 +1,9 @@
+.jarvus-grid-autoheight {
+    .x-grid-header, .x-grid-row {
+        position: static;
+    }
+
+    .x-grid-header-swap {
+        display: none;
+    }
+}
