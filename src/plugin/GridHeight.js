@@ -15,5 +15,6 @@ Ext.define('Jarvus.plugin.GridHeight', {
 
         grid.updateTotalColumnWidth = Ext.emptyFn;
         grid.refreshScroller = Ext.emptyFn;
+        grid.scrollToRecord = Ext.emptyFn;
     }
 });
