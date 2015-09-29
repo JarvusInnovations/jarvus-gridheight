@@ -9,12 +9,8 @@ Ext.define('Jarvus.plugin.GridHeight', {
     alias: 'plugin.gridheight',
 
     init: function(grid) {
-        grid.container.setScrollable(null);
+        grid.container.setScrollable('horizontal');
         grid.setInfinite(false);
         grid.addCls('jarvus-grid-autoheight');
-
-        grid.updateTotalColumnWidth = Ext.emptyFn;
-        grid.refreshScroller = Ext.emptyFn;
-        grid.scrollToRecord = Ext.emptyFn;
     }
 });
