@@ -6,4 +6,12 @@
     .x-grid-header-swap {
         display: none;
     }
+
+    .x-scroll-container {
+        position: static;
+
+        .x-grid-scrollelement {
+            position: static;
+        }
+    }
 }
