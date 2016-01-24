@@ -13,11 +13,11 @@ Ext.define('Jarvus.plugin.GridHeight', {
     },
 
     init: function(grid) {
-        var scrollable = grid.getScrollable(),
+        var enableVertical = this.getEnableVertical(),
+            scrollable = grid.getScrollable(),
             container = grid.container;
 
-        if (this.getEnableVertical()) {
-            scrollable.setDirection('horizontal');
+        if (enableVertical) {
             container.hide();
             grid.on('painted', function() {
                 grid.setWidth(grid.parent.element.getWidth())
@@ -26,6 +26,9 @@ Ext.define('Jarvus.plugin.GridHeight', {
         } else {
             scrollable.setDisabled(true);
         }
+
+        scrollable.setX(enableVertical);
+        scrollable.setY(false);
 
         grid.setInfinite(false);
         grid.addCls('jarvus-grid-autoheight');
