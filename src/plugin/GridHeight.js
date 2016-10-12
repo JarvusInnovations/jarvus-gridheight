@@ -9,7 +9,9 @@ Ext.define('Jarvus.plugin.GridHeight', {
     alias: 'plugin.gridheight',
 
     config: {
-        enableVertical: false
+        enableVertical: false,
+        scrollX: false,
+        scrollY: false
     },
 
     init: function(grid) {
@@ -27,8 +29,8 @@ Ext.define('Jarvus.plugin.GridHeight', {
             scrollable.setDisabled(true);
         }
 
-        scrollable.setX(enableVertical);
-        scrollable.setY(false);
+        scrollable.setX(enableVertical || this.getScrollX());
+        scrollable.setY(this.getScrollY());
 
         grid.setInfinite(false);
         grid.addCls('jarvus-grid-autoheight');
