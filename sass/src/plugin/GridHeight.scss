@@ -14,4 +14,10 @@
             position: static;
         }
     }
+
+    // TODO Remove when gridheight is fixed
+    &.accordion-body {
+        animation: none;
+        transform-origin: inherit;
+    }
 }
