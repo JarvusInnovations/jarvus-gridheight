@@ -11,6 +11,8 @@ Ext.define('Jarvus.plugin.GridHeight', {
         var scrollable = grid.getScrollable();
 
         grid.setInfinite(false);
+        grid.setPinHeaders(false);
+        grid.getPinnedHeader().hide();
 
         scrollable.setY(false);
         scrollable.setX(this.getEnableHorizontalScroll());
